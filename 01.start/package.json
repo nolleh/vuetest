@@ -1,0 +1,14 @@
+{
+  "scripts": {
+    "build": "vue build ./src/index.ts",
+    "serve": "vue serve ./src/index.ts"
+  },
+  "dependencies": {
+    "vue": "^2.6.10"
+  },
+  "devDependencies": {
+    "@vue/cli-service": "^3.11.0",
+    "typescript": "^3.6.2",
+    "vue-template-compiler": "^2.6.10"
+  }
+}
