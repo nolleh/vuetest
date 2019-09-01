@@ -4,6 +4,7 @@
     "serve": "vue serve ./src/index.ts"
   },
   "dependencies": {
+    "console": "^0.7.2",
     "vue": "^2.6.10"
   },
   "devDependencies": {

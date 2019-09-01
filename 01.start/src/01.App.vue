@@ -7,8 +7,7 @@
 
 <script lang="ts">
 import Intro from "./components/Intro.vue";
-
-export default {
+const introduce = {
   // name: "App",
   components: {
     Intro
@@ -19,4 +18,5 @@ export default {
     };
   }
 };
+export default introduce;
 </script>

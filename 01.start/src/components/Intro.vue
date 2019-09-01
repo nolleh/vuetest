@@ -1,6 +1,7 @@
 <template>
   <div id="intro">
-    <!-- directive. 렌더링된 DOM 에 반응형 동작을 함. span 요소의 tile 속성을 message 로.. -->
+    <!-- directive. 렌더링된 DOM 에 반응형 동작을 함. span 요소의 tile 속성을 message 로..
+    bind: 콜론하위의 속성에 데이터 값을 바인드-->
     <span v-bind:title="message">테스트트트</span>
     <p v-if="seen">if !</p>
     <ol>
@@ -23,6 +24,7 @@ export default {
     name: String
   },
   components: {
+    // declare componets in code
     "todo-item": {
       props: ["todo"],
       template: "<div id='test'> <li>{{todo.text}}</li> </div>"
