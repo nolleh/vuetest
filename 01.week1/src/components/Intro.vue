@@ -10,6 +10,7 @@
     <p>{{ message }}</p>
     <button v-on:click="reverseMessage">메시지뒤집기</button>
     <p>{{ modelmessge }}</p>
+    <!-- 양방향 바인딩 -->
     <input v-model="modelmessge" />
     <ol>
       <!-- todo 속성에 item 을 바인드하고, key 는 id -->
