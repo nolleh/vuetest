@@ -23,8 +23,14 @@ import Vue from 'vue';
 //   render: h => h(eventHandling),
 // }).$mount('#app');
 
-import formbinding from './03-form-input-binding/App.vue';
+// import formbinding from './03-form-input-binding/App.vue';
+
+// new Vue({
+//   render: h => h(formbinding),
+// }).$mount('#app');
+
+import component from './04-component/App.vue';
 
 new Vue({
-  render: h => h(formbinding),
+  render: h => h(component),
 }).$mount('#app');
