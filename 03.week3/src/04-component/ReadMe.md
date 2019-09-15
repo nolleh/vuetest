@@ -43,47 +43,49 @@
 8.  비 부모 -자식간 통신을 위해 비어있는 Vue 인스턴스를 만들고 이벤트를 송수신 할 수 있다.
 9.  컴포넌트에 슬롯을 지정하여 레이아웃을 지정, 부모에서 컨텐츠를 구성하는 방법을 고려 할 수 있다.
 
-          ```html
-          <div class="container">
+컴포넌트
 
-        <header>
-          <slot name="header"></slot>
-        </header>
-        <main>
-          <slot></slot>
-        </main>
-        <footer>
-          <slot name="footer"></slot>
-        </footer>
+    ```html
+    <div class="container">
+      <header>
+        <slot name="header"></slot>
+      </header>
+      <main>
+        <slot></slot>
+      </main>
+      <footer>
+        <slot name="footer"></slot>
+      </footer>
+    </div>
+    ```
 
-      </div>
-          ```
+부모
 
     ```html
     <app-layout>
-      <h1 slot="header">여기에 페이지 제목이 위치합니다</h1></app-layout
-    >
+      <h1 slot="header">여기에 페이지 제목이 위치합니다</h1>
+
+      <p>메인 컨텐츠의 단락입니다.</p>
+      <p>하나 더 있습니다.</p>
+
+      <p slot="footer">여기에 연락처 정보입니다.</p>
+    </app-layout>
     ```
 
-  <p>메인 컨텐츠의 단락입니다.</p>
-  <p>하나 더 있습니다.</p>
-
-  <p slot="footer">여기에 연락처 정보입니다.</p>
-</app-layout>
-    ```
+렌더링 결과
 
     ```html
     <div class="container">
 
-  <header>
-    <h1>여기에 페이지 제목이 위치합니다</h1>
-  </header>
-  <main>
-    <p>메인 컨텐츠의 단락입니다.</p>
-    <p>하나 더 있습니다.</p>
-  </main>
-  <footer>
-    <p>여기에 연락처 정보입니다.</p>
-  </footer>
-</div>
+      <header>
+        <h1>여기에 페이지 제목이 위치합니다</h1>
+      </header>
+      <main>
+       <p>메인 컨텐츠의 단락입니다.</p>
+       <p>하나 더 있습니다.</p>
+      </main>
+      <footer>
+        <p>여기에 연락처 정보입니다.</p>
+      </footer>
+    </div>
     ```
