@@ -45,7 +45,7 @@
 
 컴포넌트
 
-    ```html
+    ```vue
     <div class="container">
       <header>
         <slot name="header"></slot>
@@ -61,7 +61,7 @@
 
 부모
 
-    ```html
+    ```vue
     <app-layout>
       <h1 slot="header">여기에 페이지 제목이 위치합니다</h1>
 
@@ -74,7 +74,7 @@
 
 렌더링 결과
 
-    ```html
+    ```vue
     <div class="container">
 
       <header>
