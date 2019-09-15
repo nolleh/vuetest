@@ -1,0 +1,21 @@
+{
+  "name": "03.week3",
+  "version": "1.0.0",
+  "description": "nolleh's vue week3 example/summary",
+  "main": "app.js",
+  "author": "nolleh",
+  "license": "MIT",
+  "scripts": {
+    "build": "vue build ./src/app.ts",
+    "serve": "vue serve ./src/app.ts"
+  },
+  "dependencies": {
+    "@vue/cli-service": "^3.11.0",
+    "vue": "^2.6.10",
+    "vue-class-component": "^7.1.0"
+  },
+  "devDependencies": {
+    "prettier": "^1.18.2",
+    "vue-template-compiler": "^2.6.10"
+  }
+}
