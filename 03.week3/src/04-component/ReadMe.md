@@ -88,3 +88,5 @@
       </footer>
     </div>
     ```
+
+10. slot-scope / slot={variablename} 를 이용해서 컴포넌트에서 부모로 데이터를 전달할 수 있다.

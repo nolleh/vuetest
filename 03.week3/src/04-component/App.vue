@@ -24,12 +24,32 @@
 
       <p />
       <currency-input v-model="price"></currency-input>
+
+      <div class="parent">
+        <my-slot :items="items">
+          <template slot-scope="props">
+            <span>hello from parent</span>
+            <br />
+            <span>{{ props.text }}</span>
+            <span>{{ props.variable123 }}</span>
+          </template>
+
+          <!-- 컴포넌트의 사용측에서 어떻게 렌더링할지 정의 (prop.text) -->
+          <li slot="item" slot-scope="props" class="my-fancy-item">{{props.text}}</li>
+        </my-slot>
+      </div>
     </div>
+
+    <keep-alive>
+      <component v-bind:is="currentView"></component>
+    </keep-alive>
   </div>
 </template>
 
 <script lang="ts">
 import Vue from 'vue/dist/vue';
+import MySlot from './myslot.vue';
+
 export default Vue.extend({
   props: {
     // 기본 타입 확인 (`null` 은 어떤 타입이든 가능하다는 뜻입니다)
@@ -53,6 +73,9 @@ export default Vue.extend({
       parentMsg: '부모로부터 전달 받은 메시지',
       total: 0,
       bar: 0,
+      price: 0,
+      items: [{ text: 'hello' }, { text: 'slot-scope' }],
+      currentView: 'child',
     };
   },
   methods: {
@@ -71,7 +94,6 @@ export default Vue.extend({
       props: ['myMessage'],
       template: '<span> {{ myMessage }}</span>',
     },
-
     'button-counter': {
       template: '<button v-on:click="incrementCounter">{{ counter }}</button>',
       data: function() {
@@ -133,6 +155,8 @@ export default Vue.extend({
         },
       },
     },
+
+    MySlot,
   },
 });
 </script>
