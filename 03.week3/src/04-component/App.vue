@@ -35,7 +35,7 @@
           </template>
 
           <!-- 컴포넌트의 사용측에서 어떻게 렌더링할지 정의 (prop.text) -->
-          <li slot="item" slot-scope="props" class="my-fancy-item">{{props.text}}</li>
+          <li slot="item" slot-scope="{ variable }" class="my-fancy-item">{{variable}}</li>
         </my-slot>
       </div>
     </div>
