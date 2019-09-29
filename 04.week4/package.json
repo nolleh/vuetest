@@ -1,0 +1,17 @@
+{
+  "name": "04.week4",
+  "version": "1.0.0",
+  "main": "app.ts",
+  "author": "nolleh",
+  "license": "MIT",
+  "scripts": {
+    "build": "vue serve src/app.ts",
+    "serve": "vue serve src/app.ts"
+  },
+  "devDependencies": {
+    "typescript": "^3.6.3"
+  },
+  "dependencies": {
+    "vue": "^2.6.10"
+  }
+}
