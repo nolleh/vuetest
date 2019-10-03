@@ -1,5 +1,5 @@
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.14.1/lodash.min.js"></script>
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.14.1/lodash.min.js"></script> -->
 <template>
   <div>
     <div id="transition">
@@ -22,7 +22,7 @@
       <button v-on:click="shuffle">Shuffle</button>
       <button v-on:click="add">Add</button>
       <button v-on:click="remove">Remove</button>
-      <transition-group name="list-complete" tag="p">
+      <transition-group name="list-complete">
         <span v-for="item in items" v-bind:key="item" class="list-complete-item">{{ item }}</span>
       </transition-group>
     </div>
@@ -31,6 +31,8 @@
 
 <script lang="ts">
 import Vue from 'vue/dist/vue';
+import _ from 'lodash';
+
 export default Vue.extend({
   data() {
     return {
