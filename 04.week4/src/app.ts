@@ -5,8 +5,14 @@ import Vue from 'vue';
 //   render: h => h(Slot),
 // }).$mount('#app');
 
-import transition from './transition/App.vue';
+// import transition from './transition/App.vue';
+
+// new Vue({
+//   render: h => h(transition),
+// }).$mount('#app');
+
+import transitionStatus from './transition-status/App.vue';
 
 new Vue({
-  render: h => h(transition),
+  render: h => h(transitionStatus),
 }).$mount('#app');
